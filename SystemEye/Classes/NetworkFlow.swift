@@ -45,21 +45,21 @@ open class NetworkFlow: NSObject {
     
     func execute() {
         
-        let model = NetObjc.flow()
+//         let model = NetObjc.flow()
         
-        if self.first_model == nil {
-            self.first_model = model
-        }else {
-            model.wifiSend -= self.first_model!.wifiSend
-            model.wifiReceived -= self.first_model!.wifiReceived
-            model.wwanSend -= self.first_model!.wwanSend
-            model.wwanReceived -= self.first_model!.wwanReceived
-        }
-        self.delegate?.networkFlow?(networkFlow: self,
-                                    catchWithWifiSend: model.wifiSend,
-                                    wifiReceived: model.wifiReceived,
-                                    wwanSend: model.wwanSend,
-                                    wwanReceived: model.wwanReceived)
+//         if self.first_model == nil {
+//             self.first_model = model
+//         }else {
+//             model.wifiSend -= self.first_model!.wifiSend
+//             model.wifiReceived -= self.first_model!.wifiReceived
+//             model.wwanSend -= self.first_model!.wwanSend
+//             model.wwanReceived -= self.first_model!.wwanReceived
+//         }
+//         self.delegate?.networkFlow?(networkFlow: self,
+//                                     catchWithWifiSend: model.wifiSend,
+//                                     wifiReceived: model.wifiReceived,
+//                                     wwanSend: model.wwanSend,
+//                                     wwanReceived: model.wwanReceived)
     }
     
     private var first_model: NetModel?
